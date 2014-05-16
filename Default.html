@@ -1,0 +1,105 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<title>Projects Page</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="web/js/jquery.min.js"></script>
+		<!---webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
+		<link href="web/fonts/fontAwesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<!---//webfonts--->
+		<!---pop-up-box---->
+		<link href="web/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+		<link href="web/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="web/css/responsive.css" rel="stylesheet" />
+		<script src="web/js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <link href="web/css/projects.css" rel="stylesheet" />
+	</head>
+<body>
+	<div class="projects-header">
+		<!--<img src="web/images/project-list-header.png" />-->
+	</div>
+      
+	<!--<div style="display:inline;margin-left:54em;"class="project-groups">
+	<h3 style="display:inline;margin-left:-5em; color:grey">ALL</h3>
+	<h3 style="display:inline;margin-left:5em;color:grey">SPINOFFS</h3>
+	<h3 style="display:inline;margin-left:5em;color:grey">TECHNOLOGIES</h3>
+	</div>-->
+	<!--<table border="1" width="600px;" height="600px;" style="margin-left:auto; margin-right:auto;margin-top:10em;">
+        <tr>
+        <td><IMG BORDER="0" WIDTH="270px"  SRC="web/images/crowd-api.png"></TD>
+        <td>Row 1, Column 2</td>
+        </tr>
+        <tr>
+        <td>Row 2, Column 1</td>
+        <td>Row 2, Column 2</td>
+        </tr>
+        </table>-->
+
+    <TABLE BORDER="1" CELLSPACING="5" CELLPADDING="5" ALIGN="Center" width="900em">
+        <TR id="proj1" >
+        <TD><IMG id= "img1" style="height:350px; width:300px;" BORDER="0" src="web/images/icons/qiv-spinoff.png"></TD>
+        <TD ><b>About Technology: </b><br/><p>QIV Storage is a Nanyang Technological University (Spin-off) company specialising in the area of Cloud Storage. The Proprietary "Self Repairing Codes" technology was licensed from NTU to reduce communication overhead needed for recreation and recontruction of missing fragments. Most importantly, it reduces data storage spaces resulting in tangible saving of physical storage spaces and power energy for adopters.</p>
+            <b>How did TBX help: </b><br/><p>TBX has partnered with Researchers and Investors to Strategize, Fund, Translate and Commercialise technologies from the beginning till the end where it is market readied.</p>
+        </TD>
+        </TR>
+       
+        <TR id="proj2" onclick='window.open("http://tbx.com.sg/crowdsapi/")'> 
+        <TD><IMG id= "img2" style="height:350px; width:300px;" src="web/images/icons/crowd-api.png"></TD>
+        <TD id="desc2"><b>About Technology: </b><br/><p>The 3D Crowd Simulation API is a plugin that helps to improve productivity and enhance creativity. Programmers are at the ease of simulating a crowd of hundreds or even up to thousands of autonomous individual characters.</p>
+            <b>How did TBX help: </b><br/><p>In partnership with Prof Ong Yew Soon from School of Computer Engineering (SCE), TBX enables the ease of adoption for technology through creative packaging. Today, the licenses for this API are distributed globally. </p> <br/> <b>Testimonial:</b><i> “I am sincerely thankful to TBX for the technical support provided to the customers and users, without which the sale of the product would not transpire at all” </i>	– Prof Ong.
+        </TD>
+        </TR>
+        
+       <TR id="proj3" onclick='window.open("http://skintechmd.com/")'>
+        <TD><IMG id= "img3" style="height:350px; width:300px;" src="web/images/icons/skintech.png"></TD>
+        <TD id="desc3"><b>About Technology: </b><br/><p>An Optical Image technology powered by NTU, which helps to determine the cosmetics’ and skincare products’ suitability for your skin type. The technology was integrated as smartphone APPs, allowing shoppers to pre-determine their skin type and avoid sensitive compounds. To enhance user experiences, additional features such as scientific dictionary was added to enable user to check on complex scientific terms before selection.</p>
+            <b>How did TBX help: </b><br/><p>Translation of Ideas to Reality - TBX works closely with the company to scope, design, and customise the technologies to be in line with their business model.</p>
+        </TD>
+        </TR>
+
+        <TR id="proj4" onclick='window.open("http://www.tbx.com.sg/interactiveseg/")'>
+        <TD><IMG id= "img4" style="height:350px; width:300px;" src="web/images/icons/imgseg.jpg"></TD>
+        <TD id="desc4"><b>About Technology: </b><br/><p>Interactive Segmentation Toolbox is a comprehensive toolbox designed to help user segment the region of interest from the image background. The underlying algorithm is interfaced with easy to use APIs for people with no or limited image processing background. With a few function calls, developers can create their own interactive image segmentation applications effortlessly!</p>
+            <b>How did TBX help: </b><br/><p>Streamlining of raw technological contents into accessible and deployable APIs for easier development in future by any developers.</p>
+        </TD>
+        </TR>
+
+        </TABLE>
+            </body>
+            <script>
+	$(document).ready(function () {
+	    $("#proj1").mouseover(function () {
+	        $("#img1").attr("src", 'web/images/icons/qiv-spinoff_highlighted.png');
+		})
+	    $("#proj1").mouseleave(function () {
+	        $("#img1").attr("src", 'web/images/icons/qiv-spinoff.png');
+		})
+
+	    $("#proj2").mouseover(function () {
+	        $("#img2").attr("src", 'web/images/icons/crowd-api (highlighted).png');
+	    })
+	    $("#proj2").mouseleave(function () {
+	        $("#img2").attr("src", 'web/images/icons/crowd-api.png');
+	    })
+
+	    $("#proj3").mouseover(function () {
+	        $("#img3").attr("src", 'web/images/icons/skintech.png_highlighted.png');
+	    })
+	    $("#proj3").mouseleave(function () {
+	        $("#img3").attr("src", 'web/images/icons/skintech.png');
+	    })
+
+	    $("#proj4").mouseover(function () {
+	        $("#img4").attr("src", 'web/images/icons/imgseg_highlighted.jpg');
+	    })
+	    $("#proj4").mouseleave(function () {
+	        $("#img4").attr("src", 'web/images/icons/imgseg.jpg');
+	    })
+	});
+    
+</script>
+    <div class="footer-img">
+			</div>
+</html>

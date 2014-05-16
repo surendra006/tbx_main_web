@@ -1,0 +1,591 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>TBX</title>
+		<link href="web/css/style.css" rel='stylesheet' type='text/css' />
+        <link href="web/css/responsive.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>		
+		<script src="web/js/jquery.min.js"></script>
+		<script src="web/js/slimbox2.js" type="text/javascript"></script>
+        <script src="web/js/app.js"></script>
+		<!---webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
+		<link href="web/fonts/fontAwesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <link href="web/css/style_app_contact.css" rel="stylesheet" />
+		<!---for the maps--->
+		<script src="web/js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <!-- for the lightbox in tree !--> 
+		<link href="web/css/slimbox2.css" rel="stylesheet" type="text/css" />		
+	</head>
+	<body>	
+		<!----wrap---->        
+		<div class="top-bannar" id="move-top">
+				<div class="top-header">
+					<div class="wrap"> 						
+					 <script type="text/javascript">
+						var $ = jQuery.noConflict();							
+						$(document).ready(function () {
+                            //hides the submit button in contact page that is called when the send message button is clicked
+						    $('.app_button').hide();
+                           
+
+                            //script for screens bigger than 3000px that wraps up the content into width of 1440px  with white space on both sides. Need to test and debug still !!
+							    if ($(window).width() > 3000)
+							    {
+							        var a = document.body.parentNode.clientWidth;
+							        alert(a);
+							        var w_size = $(window).width();   // returns width of browser viewport
+							        var doc_size = $(document).width();
+							        alert(w_size);
+							        alert(doc_size);
+							        $('html').css("max-width", "1400px");
+							        $('html').css("height", "900px");
+							        $('html').css("position", "relative");
+							        $('html').css("margin-left", "auto");
+							        $('html').css("margin-right", "auto");
+							    }
+
+								//Hide (Collapse) the toggle containers on load
+								$(".toggle_container").hide();
+								//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+								$(".trigger").click(function () {
+									$(this).toggleClass("active").next().slideToggle("slow");
+									return false; //Prevent the browser jump to the link anchor
+								});
+
+                            // mouseover and onclick events for menu list
+								$("#navlist a").mouseover(function () {
+								    $(this).css("color", "#1E90FF");
+								    $(this).css("font-weight", "bold");
+								});
+
+								$("#navlist a").mouseleave(function () {
+								    $(this).css("color", "white");
+								    $(this).css("font-weight", "normal");
+								});
+
+								$("#navlist a").click(function () {
+									$("a").removeClass("green");
+									$(this).addClass("green");
+								});
+							});
+					</script>
+					<!---//End-click-drop-down-menu----->
+					<!--top-nav---->
+
+                     <!--class clear to jus create a empty space below a div---->
+					<div class="clear"> </div>					
+				</div>
+				</div>
+		</div>
+
+		<!---start-content--->
+		<div class="content">
+			<!--Top menu--> 
+		   <div class="navcontainer">
+									<ul id="navlist">
+									<li id="active"><a href="#move-top" id="current">Home</a></li>
+									<li><a href="#about">About</a></li>
+									<li><a href="#works"><span>Work</span></a></li>
+									<li><a href="#projects"><span>Project</span></a></li>
+									<li><a href="#team"><span>Team</span></a></li>
+									<li><a href="#contact"><span>Contact</span></a></li>
+									<div class="clear"> </div>
+									</ul>
+									</div>
+
+            <!-- About begins !-->
+			<div class="wrap">
+				<div class="top-grids" id="about">
+					<h3>ABOUT TBX <span> </span></h3>
+					<div class="top-grid top-frist">
+						<p class="welcome-para">We translate your research into commercially-viable technology.</p>
+					</div>
+					<div class="top-grid">
+						<p><b>TechBiz Xccelerator aka TBX </b> is run by a group of people who are passionate about creating impact from inventions. Viktor Cheng is the chief instigator behind all this. He is motivated to find new ways to improve the rate of flow and increase the success rate of inventions making an impact. As such, he started on this journey of bringing together like-minded individuals to work together to make this happen. </p>
+					</div>
+					<div class="top-grid">						
+						<p>Our team comprises technology development, software engineering, user experience, marketing, business development, quality assurance, project management and technical support folks who enjoy working with like-minded people, love to talk to inventors about their inventions and is passionate about creating impactful solutions for society.</p>
+					</div>
+					<!--<div class="top-grid">
+						<h4><span class="icon3"> </span></h4>
+						<p>Take advantage of our expertise, experience and business acumen in tranforming Research to Market and Create an everlasting Impact. .</p>
+					</div>-->
+					<div class="clear"> </div>
+				</div>
+			</div>
+			
+<script>
+	$(document).ready(function() {
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+		fixedContentPos: false,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+});
+jQuery('.map-holder .open-map').click(function () {
+	jQuery('.map-holder .map-overlay').fadeOut();
+	jQuery('.map-holder .open-map').fadeOut();
+	jQuery('.map-holder').animate({ "height": jQuery('.map-holder .map').height() });
+	return false;
+});
+});
+
+var header = $(".navcontainer");
+$(document).scroll(function (e) {
+	if ($(this).scrollTop() > $("#move-top").height()) {
+		header.css({ "position": "fixed", "top": "0" });
+
+	} else {
+		header.css("position", "relative");       
+	}
+});
+</script>								  
+</div>
+<!--content ends here--!>
+
+			<!---Tree Begins--->	
+			<div id="works" class="first-tree"style="width:100%;display:inline">		
+			 <div class="tree">
+				<div class=""><!-- lol! dont delete this ! Magic -->
+					<h2><span> </span></h2><!-- inventor icon -->
+				</div>
+			<div class="about-tree"style="width:100%;height:100%;display:inline">		
+			<img class="tree1_img" src="web/images/inventor-image%20(left).png" style="width: 42.3%; float: left; margin-bottom: 15px;">
+			<div class="textintree"><h2><i style="margin-top:1em;">"An Invention <br/> has to make sense in the world it <br/> finishes in,<br/> not in the world <br/>it started"<br/></i><p style="font-weight:lighter;margin-top:1em;">-Tim O'Reilly</p><br/></h2>
+			<a href="web/images/animated-flow01.gif" rel="lightbox" title="TBX"><img class="tbx-help" src="web/images/how-can-tbx-help-button_new.png" style=" text-align:center; margin-top:1%;" /></a></div>
+			<img class="tree1_img" src="web/images/inventor-image%20(right).png" style="width: 42.3%; float: left; margin-bottom: 15px;">
+			</div>
+			</div>
+			</div>
+			
+			<div class="second-tree"style="width:100%;height:100%;display:inline">	
+			<div class="tree1">
+				<div class=""><!-- lol! dont delete this ! Magic -->
+					<h2><span> </span></h2><!-- entrepreneur icon -->
+				</div>
+			<div class="about-tree"style="width:100%;display:inline">		
+			<img class="tree2_img" src="web/images/entrepreneur-image%20(left).png" style="width: 42.3%; float: left; margin-bottom: 15px;">
+		    <div class="textintree"><h2><i style="margin-top:1em;">"To turn really interesting ideas and fledging technologies into a company that can continue to innovate for years, it requires a lot of disciplines" </i><p style="margin-top:1em;">-Steve Jobs</p><br/></h2>
+			<a href="web/images/animated-flow02.gif" rel="lightbox" title="TBX"><img class="tbx-help" src="web/images/how-can-tbx-help-button_new.png" style=" text-align:center; margin-top:10%;"/></a></div>
+			<img class="tree2_img" src="web/images/entrepreneur-image%20(right).png" style="width: 42.3%; float: left; margin-bottom: 15px;">
+			</div>
+			</div>
+			</div>
+			 <div class="third-tree"style="width:100%;display:inline">	
+			<div class="tree2">
+				<div class=""><!-- lol! dont delete this ! Magic -->
+					<h2><span> </span></h2><!-- investor icon -->
+				</div>
+			<div class="about-tree"style="width:100%;display:inline">		
+			<img class="tree3_img" src="web/images/investor-image%20(left).png" style="width: 42.3%; float: left; margin-bottom: 15px;">
+		    <div class="textintree"><h2><i style="margin-top:-1em;">"The key to<br/>success for everything <br/>in business, Science<br/> and technology is <br />never to follow<br/>others"<br/></i><p style="margin-top:1em;">-Masaru Ibuka</p><br/></h2>
+			<a href="web/images/animated-flow03.gif" rel="lightbox" title="TBX"><img class="tbx-help" src="web/images/how-can-tbx-help-button_new.png" style="text-align:center; margin-top:10%;"/></a></div>
+			<img class="tree3_img" src="web/images/investor-image%20(right).png" style="width: 42.3%; float: left; margin-bottom: 15px;">
+			</div>
+			</div>
+			</div>
+			<!---//end three trees-->
+			
+			<!----------------start-projects-slider-------------->				
+			<div class="works" id="projects">
+				<div class="wrap">
+					<h2>FEATURED PROJECTS<span> </span></h2>
+				</div>
+				<!-- BEGIN .wmuSlider -->
+					<div class="wmuSlider example3">
+						<div class="wmuSliderWrapper">
+							<article>
+								<div class="wrap"> <!--uncomment below to add some text in future>
+								<!--<div class="artical-info">
+									<h4>Crowd Simulation API</h4>
+									<p>Crowd Simulation API is a crowd simulation plugin developed for Unity game developers. It is designed to enhance your creativity and improve productivity. You can easily simulate a crowd of hundreds and even up to a thousand of autonomous individual characters. In order to achieve this, we have created a suite of scripts and libraries from the ground up that provide a more intuitive and natural way of creating stunning crowd simulations.</p>
+									<a href="#"><span> </span>View all works</a>
+								</div>-->
+								<div class="artical-pic">
+									<img src="web/images/Project-Banner-Images/project-slideshow-image_API.png" />
+									<!--<div class="artical-pic-head">-->
+										<!--<div class="artical-pic-head-left">
+											<a href="#"><h4>Fully automated crowd-simulation tool</h4></a>
+											<span>Game Development/Unity Plugin</span>
+										</div>-->
+										<!--<div class="artical-pic-head-right">
+											<a href="#">145<label> </label> </a>
+										</div>-->
+										<!--<div class="clear"> </div>
+									</div>-->
+									<!--<p>Available now on the Unity platform.</p>-->
+									<a class="readmore" href="Default.html"  target="_blank"><span> </span></a>
+								</div>
+								</div>
+							</article>
+							<article>
+								<div class="wrap">
+								<!--<div class="artical-info">
+									<h4>Crowd Simulation API</h4>
+									<p>Crowd Simulation API is a crowd simulation plugin developed for Unity game developers. It is designed to enhance your creativity and improve productivity. You can easily simulate a crowd of hundreds and even up to a thousand of autonomous individual characters. In order to achieve this, we have created a suite of scripts and libraries from the ground up that provide a more intuitive and natural way of creating stunning crowd simulations.</p>
+									<a href="#"><span> </span>View all works</a>
+								</div>-->
+								<div class="artical-pic">
+									<img src="web/images/Project-Banner-Images/project-slideshow-image_CUSTOM.png" />
+									<!--<div class="artical-pic-head">-->
+										<!--<div class="artical-pic-head-left">
+											<a href="#"><h4>Fully automated crowd-simulation tool</h4></a>
+											<span>Game Development/Unity Plugin</span>
+										</div>-->
+										<!--<div class="artical-pic-head-right">
+											<a href="#">145<label> </label> </a>
+										</div>-->
+										<!--<div class="clear"> </div>
+									</div>-->
+									<!--<p>Available now on the Unity platform.</p>-->
+									<a class="readmore" href="Default.html" target="_blank"><span> </span></a>
+								</div>
+								</div>
+							</article>
+
+                            <article>
+								<div class="wrap">
+								<!--<div class="artical-info">
+									<h4>Crowd Simulation API</h4>
+									<p>Crowd Simulation API is a crowd simulation plugin developed for Unity game developers. It is designed to enhance your creativity and improve productivity. You can easily simulate a crowd of hundreds and even up to a thousand of autonomous individual characters. In order to achieve this, we have created a suite of scripts and libraries from the ground up that provide a more intuitive and natural way of creating stunning crowd simulations.</p>
+									<a href="#"><span> </span>View all works</a>
+								</div>-->
+								<div class="artical-pic">
+									<img src="web/images/Project-Banner-Images/project-slideshow-image_LATEST.png" />
+									<!--<div class="artical-pic-head">-->
+										<!--<div class="artical-pic-head-left">
+											<a href="#"><h4>Fully automated crowd-simulation tool</h4></a>
+											<span>Game Development/Unity Plugin</span>
+										</div>-->
+										<!--<div class="artical-pic-head-right">
+											<a href="#">145<label> </label> </a>
+										</div>-->
+										<!--<div class="clear"> </div>
+									</div>-->
+									<!--<p>Available now on the Unity platform.</p>-->
+									<a class="readmore" href="Default.html" target="_blank"><span> </span></a>
+								</div>
+								</div>
+							</article>
+
+                            <article>
+								<div class="wrap">
+								<!--<div class="artical-info">
+									<h4>Crowd Simulation API</h4>
+									<p>Crowd Simulation API is a crowd simulation plugin developed for Unity game developers. It is designed to enhance your creativity and improve productivity. You can easily simulate a crowd of hundreds and even up to a thousand of autonomous individual characters. In order to achieve this, we have created a suite of scripts and libraries from the ground up that provide a more intuitive and natural way of creating stunning crowd simulations.</p>
+									<a href="#"><span> </span>View all works</a>
+								</div>-->
+								<div class="artical-pic">
+									<img src="web/images/Project-Banner-Images/project-slideshow-image_SPINOFF.png" />
+									<!--<div class="artical-pic-head">-->
+										<!--<div class="artical-pic-head-left">
+											<a href="#"><h4>Fully automated crowd-simulation tool</h4></a>
+											<span>Game Development/Unity Plugin</span>
+										</div>-->
+										<!--<div class="artical-pic-head-right">
+											<a href="#">145<label> </label> </a>
+										</div>-->
+										<!--<div class="clear"> </div>
+									</div>-->
+									<!--<p>Available now on the Unity platform.</p>-->
+									<a class="readmore" href="Default.html" target="_blank"><span> </span></a>
+								</div>
+								</div>
+							</article>
+						</div>
+					<!-- END .wmuSlider -->
+					</div>
+					<!-- Scripts -->
+					<script type="text/javascript" src="web/js/modernizr.custom.min.js"></script>    
+					<script src="web/js/jquery.wmuSlider.js"></script>
+					<script>
+						$('.example3').wmuSlider({
+							touch: Modernizr.touch,
+							animation: 'slide',
+							items: 1
+						});
+					</script>
+			</div>
+			<!---//End-projects--->
+			
+				<script src="web/js/jquery-ui.min.js"></script>
+				<script src="web/js/hammer.min.js"></script>
+				<script src="web/js/responsiveCarousel.js"></script>
+				<script>
+				/* Okay, everything is loaded. Let's go! (on dom ready) */
+				$(function () {
+					/* a generic product carousel - something that might appear in the body of a e-commerce site. */
+					$('#textslider')
+						.responsiveCarousel({
+							unitWidth:          'compute',
+							target:             '#textslider .slider-target',
+							unitElement:        '#textslider .slider-target > li',
+							mask:               '#textslider .slider-mask',
+							arrowLeft:          '#textslider .arrow-left',
+							arrowRight:         '#textslider .arrow-right',
+							dragEvents:         Modernizr.touch,
+							responsiveUnitSize:function () {
+								return 1;
+							},
+							step:-1,
+							onShift:function (i) {
+								var $current = $('#selector li a[rel=frame_' + i + ']');
+								$('#selector li a').removeClass('current');
+								$current.addClass('current');
+							}
+						});
+				
+					/* this next part toggles the "auto slide show" option. */
+					$('#toggle-slide-show').on('click', function (ev) {
+						ev.preventDefault();
+						$('#textslider').responsiveCarousel('toggleSlideShow');
+					});
+				
+					/* this lets us jump to a slide */
+					$('#selector a').on('click', function (ev) {
+						ev.preventDefault();
+						var i = /\d/.exec($(this).attr('rel'));
+						$('#textslider').responsiveCarousel('goToSlide', i);
+					});
+				
+				});
+				$(window).on('load',function(){
+					$('.examples').responsiveCarousel('redraw');
+				});
+				</script>
+        	<!----------------Team starts-------------->		
+			<div id="team" style="margin-top:-10px;">
+			<img class="team-img" src="web/images/team-banner%20(temp).jpg" /></div>
+				<!------------//team-------------->
+
+			
+			<!---start-getintouch---->
+			<div class="get-intouch" id="contact">
+				<div class="wrap">
+					<h3>GET IN TOUCH WITH US!<span> </span></h3>
+					<h1>CONTACT INFORMATION</h1>
+				<div class="get-intouch-grids">
+				<div class="get-intouch-left-address">
+					<h4>Contact </h4>
+						<p>Email:<a href="contact@tbx.com.sg"> contact@tbx.com.sg</a></p>
+						<p>Website: www.tbx.com.sg</p>						
+					</div>
+					<div class="get-intouch-left-address">
+					<h4>Address </h4>
+						<p>Techbiz Xccelerator Pte Ltd</p>
+						<p>18 Nanyang Drive, Unit 231,</p>
+						<p>Singapore 637723</p>
+					</div>
+					
+					<div class="get-intouch-center-form">
+						<h5>Contact Form</h5>
+						<form id="ajax-contact" method="post" action="send_mail.php" >
+							<input id="email" type="text" name="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/><br/>
+							<input id="name" name= "name" class="frist" type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}"/><br/>
+							<textarea id="message" name= "message" onfocus="if(this.value == 'Your Message') this.value='';" onblur="if(this.value == '') this.value='Your Message';" />Your Message</textarea><br/>
+							<a onclick="document.getElementById('send_ mail_button').click()"><img id="contact-send-message" src="web/images/send-message-button.png" style="cursor:pointer;margin-top:3em;"></a></div>
+					         <div class="app_button"><button id="send_ mail_button" type="submit"></button>	</div>	
+                              <div class="clear"> </div>
+						</form>
+                    <div id="form-messages"></div>                   
+                   
+					</div>
+					<!--<div class="get-intouch-right-social">
+						<ul>
+							<li><a  title="linked in" href="#"> <img src="web/images/linkin-icon.png" /> </a></li>
+							<li><a  title="facebook"  href="#"> <img src="web/images/fb-link-icon.png" /> </a></li>							
+						</ul>
+					</div>-->
+					<!-- aToolTip js -->
+						<script type="text/javascript" src="web/js/jquery.atooltip.js"></script>
+						<script type="text/javascript">
+							$(function(){ 
+								$('a.normalTip').aToolTip();
+								}); 
+						</script>
+					<div class="clear"> </div>
+					<div class="map-mover" style="width:100%;display:inline;margin-left:10%;height:6em; float:right;margin-right:9%;margin-top:-10%;">				
+									<!-- Google Map, to set this up scroll down to the bottom of this file. -->
+										<div class="map-holder">
+											<div id="map" class="map"></div>
+											<div class="map-overlay"></div>
+											<button class="button open-map"><i class="icon-chevron-down"></i></button>
+				   </div>
+                    
+										</div><!-- end map -->
+				</div>
+				</div>
+								
+	
+			<!---//End-getintouch---->
+			
+			<!----//End-copy-right--->
+			<!---smoth-scrlling---->
+							<script type="text/javascript">
+									$(document).ready(function(){
+									$('a[href^="#"]').on('click',function (e) {
+										e.preventDefault();
+										var target = this.hash,
+										$target = $(target);
+										$('html, body').stop().animate({
+											'scrollTop': $target.offset().top
+										}, 1000, 'swing', function () {
+											window.location.hash = target;
+										});
+									});
+									//if ($(window).width > 2000) {
+									//    $(".footer").mouseleave(function () {
+									//        $(".tbx-help").attr("src", 'web/images/how-can-tbx-help-button (mouse-over).png');
+									//    })
+									    //}
+									
+});
+//function for view more projects animation
+$(".readmore span").mouseover(function () {
+	$(".readmore span").css("background-image", "url('web/images/view-more-project-button (highlighted).png')");
+})
+$(".readmore span").mouseleave(function () {
+	$(".readmore span").css("background-image", "url('web/images/view-more-project-button.png')");
+})
+
+//function for send mess animation
+$("#contact-send-message").mouseover(function () {
+	$("#contact-send-message").attr("src", 'web/images/send-message-button (highlighted).png');
+})
+$("#contact-send-message").mouseleave(function () {
+	$("#contact-send-message").attr("src", 'web/images/send-message-button.png');
+})
+
+
+//how can tbx help buttons animations
+$(".tree .tbx-help").mouseenter(function () {
+    $(".tree .tbx-help").attr("src", 'web/images/how-can-tbx-help-button (mouse-over).png');
+})
+$(".tree .tbx-help").mouseleave(function () {
+    $(".tree .tbx-help").attr("src", 'web/images/how-can-tbx-help-button_new.png');
+})
+
+$(".tree1 .tbx-help").mouseenter(function () {
+    $(".tree1 .tbx-help").attr("src", 'web/images/how-can-tbx-help-button (mouse-over).png');
+})
+$(".tree1 .tbx-help").mouseleave(function () {
+    $(".tree1 .tbx-help").attr("src", 'web/images/how-can-tbx-help-button_new.png');
+})
+
+$(".tree2 .tbx-help").mouseenter(function () {
+    $(".tree2 .tbx-help").attr("src", 'web/images/how-can-tbx-help-button (mouse-over).png');
+})
+$(".tree2 .tbx-help").mouseleave(function () {
+    $(".tree2 .tbx-help").attr("src", 'web/images/how-can-tbx-help-button_new.png');
+})
+
+$(window).load(function () {
+    //function for three tree image animations
+    var topcal = $("#move-top").height();
+    $(document).scroll(function (e) {
+        if ($(this).scrollTop() > topcal) {
+            $(".tree h2 span").addClass('tree-transition');
+            $(".tree h2 span").css("background-image", "url('web/images/low_res_icons/inventor-icon_lowres.gif')");
+        }
+        else {
+            $(".tree h2 span").addClass('tree-transition');
+            $(".tree h2 span").css("background-image", "url('web/images/low_res_icons/inventor-icon_lowres_nohigh.gif')");
+        }
+    });
+
+
+    var topcal1 = $("#move-top").height() + $("#about").height() + $(".tree h2 span").height()+155;
+    $(document).scroll(function (e) {
+        if ($(this).scrollTop() > topcal1) {
+            $(".tree1 h2 span").addClass('tree-transition');
+            $(".tree1 h2 span").css("background-image", "url('web/images/low_res_icons/entrepreneur-icon_NEW-HIGHLIGHTED.gif')");
+        }
+        else {
+            $(".tree1 h2 span").addClass('tree-transition');
+            $(".tree1 h2 span").css("background-image", "url('web/images/low_res_icons/entrepreneur-icon_NEW.gif')");
+        }
+    });
+
+    var topcal2 = $("#move-top").height() + $("#about").height() + $(".tree").height() + $(".tree1 h2 span").height() + 260;
+    $(document).scroll(function (e) {
+        if ($(this).scrollTop() > topcal2) {
+            $(".tree2 h2 span").addClass('tree-transition');
+            $(".tree2 h2 span").css("background-image", "url('web/images/low_res_icons/investor-icon_NEW-HIGHLIGHTED.gif')");
+        }
+        else {
+            $(".tree2 h2 span").addClass('tree-transition');
+            $(".tree2 h2 span").css("background-image", "url('web/images/low_res_icons/investor-icon_NEW.gif')");
+        }
+    });
+});
+////function to preload images
+//$(window).load(function () {    
+//    $.fn.preload = function () {        
+//        this.each(function () {
+//            $('<img/>')[0].src = this;
+//        });
+//    }
+//    $(['web/images/investors-icon (new-highlighted).png', 'web/images/investors-icon _new.png', 'web/images/entrepreneur-icon_new.png', 'web/images/entrepreneur-icon (new-highlighted).png', 'web/images/inventor-icon_new.png', 'web/images/inventor-icon (new-highlighted).png']).preload();
+//});
+</script>
+
+<!-- Google Map, you can get latitude and longitude here: http://itouchmap.com/latlong.html -->
+	<script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+	<script type="text/javascript">
+		jQuery(function () {
+
+			/* Add your latitude value here */
+			var latitude = 1.342827;
+
+			/* Add your longitude value here */
+			var longitude = 103.687248;
+
+			/* Add the text you want to show on clicking the pin here */
+			var infowindow_text = 'Take Overbridge and Walk through Yunnan park to reach TBX.';
+
+
+			/* Don't edit any of this unless you know what you're doing */
+			var myLatlng = new google.maps.LatLng(latitude, longitude);
+			var mapOptions = {
+				zoom: 16,
+				center: myLatlng,
+				scrollwheel: false,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+			var marker_image = 'web/images/map-marker.png';
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				title: '',
+				icon: marker_image
+			});
+			var infowindow = new google.maps.InfoWindow({ content: '<p>' + infowindow_text + '</p>' });
+			google.maps.event.addListener(marker, 'click', function () {
+				infowindow.open(map, marker);
+			});
+		});
+</script>
+        <!---//footer---->
+			<div class="footer-img">
+			</div>
+					
+		<!---//End-content--->
+		<!----//wrap---->
+	</body>
+</html>
+
